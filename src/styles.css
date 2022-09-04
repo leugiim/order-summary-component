@@ -1,2 +1,132 @@
-.attribution { font-size: 11px; text-align: center; }
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --font-size: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    font-size: var(--font-size);
+    color: var(--desaturated-blue);
+}
+
+.container { 
+    height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; 
+    background: url("images/pattern-background-desktop.svg") no-repeat var(--pale-blue); 
+    background-size: 100% auto;
+}
+
+.card {
+    width: 450px;
+    border-radius: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+.card-header img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+.card-body {
+    padding: 30px 50px;
+}
+.card-body h1 {
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.plan-info {
+    background-color: var(--very-pale-blue);
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.info {
+    margin-left: 15px;
+    margin-right: auto;
+}
+
+.plan-info .title {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.btn {
+    font-weight: 900;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color:#fff;
+    background-color: var(--bright-blue);
+    box-shadow: 0px 10px 20px #ccc;
+}
+
+.btn-link {
+    color: var(--bright-blue);
+    width: auto;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.btn-cancel {
+    color: var(--desaturated-blue);
+}
+
+.btn:hover, .btn:active, .btn:focus {
+    filter: opacity(90%);
+}
+.btn-link:hover, .btn-link:active, .btn-link:focus {
+    text-decoration: none;
+}
+.btn-cancel:hover, .btn-cancel:active, .btn-cancel:focus {
+    color: var(--dark-blue);
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        background: url("images/pattern-background-mobile.svg") no-repeat var(--pale-blue); 
+        background-size: 100% auto;
+    }
+    .card {
+        width: 100%;
+        margin:30px;
+    }
+    .card-body{
+        padding: 20px;
+    }
+
+    .card-body h1 {
+        font-size: 1.3em;
+    }
+    .plan-info {
+        font-size: .9em;
+    }
+}
+
+
+.attribution { position:absolute; bottom: 10px; font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
